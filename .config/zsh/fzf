@@ -1,0 +1,25 @@
+choose-app() {
+    local in
+    read in
+    entity=$in
+
+    if [ -d $entity ]; then
+        cd $entity
+        zle accept-line
+    else
+        nvim $entity
+    fi
+}
+
+ffzf() {
+    fd $* | fzf | choose-app 
+} 
+
+hfzf() {
+    ffzf -H
+} 
+
+rfzf() {
+    ffzf -H . /
+} 
+

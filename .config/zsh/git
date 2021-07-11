@@ -1,0 +1,16 @@
+unalias ga
+unalias gc
+
+ga () {
+    if [ $1 ]; then
+        git add $*
+    else
+        git add .
+    fi
+}
+
+gc () {
+    local var="$*"
+    git commit -m "$var"
+    echo "Commit added: $var"
+}
