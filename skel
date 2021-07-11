@@ -6,6 +6,7 @@
 .config/Code - OSS/User/settings.json
 .config/Code - OSS/User/snippets/latex.json
 .config/zsh
+.todo/config
 .zshrc
 .bashrc
 .alias
