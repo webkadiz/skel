@@ -1,0 +1,358 @@
+[apps/update-manager]
+first-run=false
+launch-count=20
+launch-time=int64 1627398550
+show-details=true
+window-height=442
+window-width=1452
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1627051513
+
+[desktop/ibus/general]
+embed-preedit-text=true
+
+[desktop/ibus/panel]
+show-icon-on-systray=false
+
+[desktop/ibus/panel/emoji]
+hotkey=["<Control><Shift>'"]
+
+[org/gnome/Totem]
+active-plugins=['open-directory', 'autoload-subtitles', 'media-player-keys', 'rotation', 'skipto', 'recent', 'movie-properties', 'save-file', 'screenshot', 'screensaver', 'vimeo', 'variable-rate', 'apple-trailers']
+subtitle-encoding='UTF-8'
+
+[org/gnome/baobab/ui]
+window-size=(960, 600)
+window-state=87168
+
+[org/gnome/control-center]
+last-panel='power'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2021-07-27T15:12:03+00'
+
+[org/gnome/deja-dup/file]
+migrated=true
+
+[org/gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-magnifier-enabled=false
+
+[org/gnome/desktop/a11y/keyboard]
+mousekeys-enable=false
+
+[org/gnome/desktop/a11y/magnifier]
+mag-factor=1.0
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gucharmap.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Screenshot.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'simple-scan.desktop', 'vinagre.desktop', 'yelp.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/ryan-stone-skykomish-river.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
+[org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'us'), ('xkb', 'ru')]
+sources=[('xkb', 'us'), ('xkb', 'ru')]
+xkb-options=['terminate:ctrl_alt_bksp', 'grp:toggle', 'ctrl:swapcaps']
+
+[org/gnome/desktop/interface]
+enable-animations=false
+enable-hot-corners=false
+font-name='Ubuntu 11'
+gtk-im-module='ibus'
+gtk-theme='Yaru-dark'
+show-battery-percentage=true
+text-scaling-factor=1.5
+toolkit-accessibility=false
+
+[org/gnome/desktop/notifications]
+application-children=['org-gnome-nautilus', 'gnome-printers-panel', 'update-manager', 'gnome-power-panel', 'nm-applet', 'apport-gtk', 'gnome-network-panel', 'telegramdesktop', 'alacritty-alacritty', 'yandex-browser-beta', 'org-gnome-software', 'discord', 'firefox', 'org-gnome-dejadup']
+
+[org/gnome/desktop/notifications/application/alacritty-alacritty]
+application-id='alacritty_alacritty.desktop'
+
+[org/gnome/desktop/notifications/application/apport-gtk]
+application-id='apport-gtk.desktop'
+
+[org/gnome/desktop/notifications/application/discord]
+application-id='discord.desktop'
+
+[org/gnome/desktop/notifications/application/firefox]
+application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
+[org/gnome/desktop/notifications/application/nm-applet]
+application-id='nm-applet.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-dejadup]
+application-id='org.gnome.DejaDup.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/telegramdesktop]
+application-id='telegramdesktop.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[org/gnome/desktop/notifications/application/yandex-browser-beta]
+application-id='yandex-browser-beta.desktop'
+
+[org/gnome/desktop/peripherals/mouse]
+natural-scroll=false
+speed=1.0
+
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+disable-microphone=false
+report-technical-problems=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/ryan-stone-skykomish-river.jpg'
+primary-color='#000000'
+secondary-color='#000000'
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 0
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
+theme-name='Yaru'
+
+[org/gnome/desktop/wm/keybindings]
+close=['<Shift><Alt>q']
+maximize=['<Alt>u']
+minimize=['<Alt>h']
+move-to-workspace-1=['<Shift><Alt>exclam']
+move-to-workspace-2=['<Shift><Alt>at']
+move-to-workspace-3=['<Shift><Alt>numbersign']
+move-to-workspace-4=['<Shift><Alt>dollar']
+move-to-workspace-down=['<Shift><Alt>k']
+move-to-workspace-up=['<Shift><Alt>j']
+show-desktop=@as []
+switch-to-workspace-1=['<Alt>1']
+switch-to-workspace-2=['<Alt>2']
+switch-to-workspace-3=['<Alt>3']
+switch-to-workspace-4=['<Alt>4']
+switch-to-workspace-down=['<Alt>k']
+switch-to-workspace-up=['<Alt>j']
+toggle-fullscreen=['<Alt>f']
+unmaximize=['<Alt>d']
+
+[org/gnome/desktop/wm/preferences]
+mouse-button-modifier='<Alt>'
+num-workspaces=12
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[org/gnome/evince/default]
+window-ratio=(1.0084711577248893, 0.7126567844925884)
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/gedit/plugins]
+active-plugins=['modelines', 'spell', 'filebrowser', 'docinfo', 'time']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/webkadiz'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
+
+[org/gnome/gnome-screenshot]
+border-effect='none'
+include-border=true
+include-pointer=false
+last-save-directory='file:///home/webkadiz/Pictures'
+
+[org/gnome/mutter]
+dynamic-workspaces=false
+overlay-key='Super_L'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+sidebar-width=214
+
+[org/gnome/settings-daemon/plugins/media-keys]
+control-center=['<Primary><Alt>s']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
+decrease-text-size=['<Alt>minus']
+increase-text-size=['<Alt>equal']
+screenshot=@as []
+search=['<Primary><Alt>f']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Alt>5'
+command='wmctrl -s 4'
+name='Switch to workspace 5'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Alt>6'
+command='wmctrl -s 5'
+name='Switch to workspace 6'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Alt>7'
+command='wmctrl -s 6'
+name='Switch to workspace 7'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Alt>8'
+command='wmctrl -s 7'
+name='Switch to workspace 8'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
+binding='Print'
+command='ksnip -r'
+name='Screenshot'
+
+[org/gnome/settings-daemon/plugins/power]
+idle-dim=false
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='nothing'
+
+[org/gnome/settings-daemon/plugins/xsettings]
+hinting='slight'
+
+[org/gnome/shell]
+app-picker-view=uint32 1
+disabled-extensions=['ubuntu-appindicators@ubuntu.com']
+enabled-extensions=['just-perfection-desktop@just-perfection']
+favorite-apps=['firefox.desktop', 'org.gnome.Terminal.desktop', 'yandex-browser-beta.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'org.gnome.Software.desktop', 'yelp.desktop']
+had-bluetooth-devices-setup=true
+
+[org/gnome/shell/extensions/dash-to-dock]
+preferred-monitor=0
+
+[org/gnome/shell/extensions/desktop-icons]
+show-home=false
+show-trash=false
+
+[org/gnome/shell/extensions/just-perfection]
+accessibility-menu=false
+activities-button=false
+activities-button-icon-monochrome=true
+activities-button-label=true
+aggregate-menu=true
+animation=0
+app-menu=true
+app-menu-icon=true
+background-menu=true
+clock-menu=true
+dash=false
+dash-icon-size=48
+gesture=true
+keyboard-layout=false
+notification-banner-position=0
+osd=true
+panel=true
+panel-arrow=false
+panel-corner-size=1
+panel-notification-icon=true
+power-icon=true
+search=true
+show-apps-button=true
+theme=false
+window-demands-attention-focus=true
+workspace=true
+workspace-popup=false
+
+[org/gnome/software]
+check-timestamp=int64 1627398553
+online-updates-timestamp=int64 1627114974
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=230
+sort-column='name'
+sort-directories-first=true
+sort-order='descending'
+type-format='category'
+window-position=(344, 84)
+window-size=(1231, 902)
+
+[org/yorba/shotwell/preferences/ui]
+display-basic-properties=true
+display-extended-properties=false
+display-photo-comments=false
+display-photo-ratings=true
+display-photo-tags=true
+display-photo-titles=false
+display-search-bar=false
+display-sidebar=true
+events-sort-ascending=false
+library-photos-sort-ascending=false
+library-photos-sort-by=2
+show-welcome-dialog=true
+sidebar-position=180
+
+[org/yorba/shotwell/preferences/window]
+library-height=768
+library-maximize=false
+library-width=1024
