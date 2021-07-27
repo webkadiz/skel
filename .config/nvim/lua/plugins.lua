@@ -2,6 +2,8 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'nvim-lua/completion-nvim'
+    use 'nvim-lua/popup.nvim'
+    use 'ThePrimeagen/harpoon'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'easymotion/vim-easymotion'
     use 'chriskempson/base16-vim'
@@ -24,4 +26,14 @@ return require('packer').startup(function()
     use 'b3nj5m1n/kommentary'
     use 'folke/which-key.nvim'
     use 'Pocco81/TrueZen.nvim'
+    use 'navarasu/onedark.nvim'
+    use 'justinmk/vim-sneak'
+    use 'tpope/vim-surround'
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
+    use { 'neoclide/coc.nvim', branch = 'release' }
 end)

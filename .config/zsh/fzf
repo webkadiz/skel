@@ -16,7 +16,7 @@ ffzf() {
 } 
 
 hfzf() {
-    ffzf -H
+    ffzf -H . ~
 } 
 
 rfzf() {

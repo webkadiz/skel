@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-set $bg ~/.wallpaper.jpg 
+set $bg /home/webkadiz/.wallpaper.jpg 
 
 new_window pixel 0
 

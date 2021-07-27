@@ -21,7 +21,7 @@ window:
     startup_mode: Fullscreen
 
 font:
-    size: 13
+    size: 12
     normal:
       family: 'Fira Code'
       style: regular
@@ -45,6 +45,13 @@ key_bindings:
   - { key: K, mods: Super, action: ScrollLineUp }
   - { key: D, mods: Super, action: ScrollHalfPageDown }
   - { key: U, mods: Super, action: ScrollHalfPageUp }
+  - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
+  - { key: Return,   mods: Control, chars: "\x1b[13;5u" }
 
 shell:
     program: /usr/bin/zsh
+
+cursor:
+    style:
+        blinking: On
+    blink_interval: 500
