@@ -46,5 +46,5 @@ elif args.to_skel:
     dest = './'
     sync(src, dest)
 else:
-    print("set -f or -t flag")
+    parser.print_help()
     exit(1)
