@@ -12,3 +12,4 @@
 .alias
 .vars
 .gnome-settings
+.funcs
