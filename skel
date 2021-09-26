@@ -13,3 +13,4 @@
 .vars
 .gnome-settings
 .funcs
+.tmux.conf
