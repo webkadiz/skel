@@ -18,6 +18,9 @@ show-icon-on-systray=false
 [desktop/ibus/panel/emoji]
 hotkey=["<Control><Shift>'"]
 
+[org/compiz/profiles/Default/plugins/core]
+focus-prevention-level=2
+
 [org/gnome/Totem]
 active-plugins=['open-directory', 'autoload-subtitles', 'media-player-keys', 'rotation', 'skipto', 'recent', 'movie-properties', 'save-file', 'screenshot', 'screensaver', 'vimeo', 'variable-rate', 'apple-trailers']
 subtitle-encoding='UTF-8'
@@ -176,10 +179,13 @@ switch-to-workspace-3=['<Alt>3']
 switch-to-workspace-4=['<Alt>4']
 switch-to-workspace-down=['<Alt>k']
 switch-to-workspace-up=['<Alt>j']
+switch-windows=['<Alt>e']
+switch-windows-backward=['<Shift><Alt>e']
 toggle-fullscreen=['<Alt>f']
 unmaximize=['<Alt>d']
 
 [org/gnome/desktop/wm/preferences]
+focus-mode='sloppy'
 mouse-button-modifier='<Alt>'
 num-workspaces=12
 
@@ -220,6 +226,7 @@ last-save-directory='file:///home/webkadiz/Pictures'
 
 [org/gnome/mutter]
 dynamic-workspaces=false
+experimental-features=['x11-randr-fractional-scaling']
 overlay-key='Super_L'
 
 [org/gnome/nautilus/preferences]
@@ -230,6 +237,11 @@ search-filter-time-type='last_modified'
 initial-size=(890, 550)
 maximized=false
 sidebar-width=214
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-schedule-automatic=false
+night-light-schedule-from=21.0
 
 [org/gnome/settings-daemon/plugins/media-keys]
 control-center=['<Primary><Alt>s']
