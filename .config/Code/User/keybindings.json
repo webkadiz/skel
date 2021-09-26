@@ -124,4 +124,14 @@
             "workbench.action.focusSideBar",
         ]
     },
+    {
+        "key": "ctrl+shift+g r",
+        "command": "git.revertSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor"
+    },
 ]
