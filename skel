@@ -2,9 +2,9 @@
 .config/alacritty
 .config/i3/config
 .config/redshift.conf
-.config/Code - OSS/User/keybindings.json
-.config/Code - OSS/User/settings.json
-.config/Code - OSS/User/snippets/latex.json
+.config/Code/User/keybindings.json
+.config/Code/User/settings.json
+.config/Code/User/snippets
 .config/zsh
 .todo/config
 .zshrc
