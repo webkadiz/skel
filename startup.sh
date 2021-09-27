@@ -2,10 +2,14 @@
 
 # print help
 if [[ ! $1 ]]; then
-    echo "-n, --name - your name"
-    echo "-u, --username - your username"
-    echo "-p, --passoword - password for your user and ssh key"
-    echo "-e, --email - your work email"
+    echo "-n, --name        your name"
+    echo "-u, --username    your username"
+    echo "-p, --password    password for your user and ssh key"
+    echo "-e, --email       your work email"
+    echo "--yay             setup yay"
+    echo "--gnome           setup gnome"
+    echo "--ydisk           setup yandex disk"
+    echo "--gh-ssh          setup github ssh key"
     exit
 fi
 
