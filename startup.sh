@@ -42,10 +42,10 @@ done
 
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
-if [[ ! $PASSWORD ]]; then
-    echo "set password through -p option"
-    exit
-fi
+if [[ ! $PASSWORD ]]; then echo "set password through -p|--password option"; fi
+if [[ ! $EMAIL ]]; then echo "set email through -e|--email option"; fi
+if [[ ! $USER ]]; then echo "set user through -u|--user option"; fi
+if [[ ! $PASSWORD || ! $EMAIL || ! $USER ]]; then exit; fi
 
 # change shell to zsh
 chsh < <(echo -e "$PASSWORD\n/usr/bin/zsh")
