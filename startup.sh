@@ -78,6 +78,11 @@ if [[ $? -ne 0 ]]; then
     exit
 fi
 
+# install gnome
+if [[ $GNOME ]]; then
+    pacman -S gnome
+fi
+
 # setup sudo
 visudo
 
