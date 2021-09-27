@@ -42,6 +42,10 @@ chsh < <(echo -e "$PASSWORD\n/usr/bin/zsh")
 # install primary packages
 sudo pacman -S $(cat packages/archlinux/pacman-primary)
 
+# setup git
+git config --global user.name "Vladislav Tkachenko"
+git config --global user.email "$EMAIL"
+
 # load gnome settings
 if [[ $GNOME ]]; then
     cat .gnome-settings | dconf load /
