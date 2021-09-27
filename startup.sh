@@ -4,7 +4,7 @@
 if [[ ! $1 ]]; then
     echo "-n, --name - your name"
     echo "-u, --username - your username"
-    echo "-p, --passoword - password for your user"
+    echo "-p, --passoword - password for your user and ssh key"
     echo "-e, --email - your work email"
     exit
 fi
@@ -45,6 +45,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --ydisk)
       YDISK="YES"
+      shift
+      ;;
+    --gh-ssh)
+      GH_SSH="YES"
       shift
       ;;
     *)
@@ -130,4 +134,11 @@ fi
 # setup yandex disk
 if [[ $YDISK ]]; then
     echo -e "\n/home/$USER/ydisk\n" | yandex-disk setup
+fi
+
+# setup github ssh key
+if [[ $GH_SSH ]]; then
+    echo -e "/home/$USER/.ssh/github\n$PASSWORD\n$PASSWORD" | ssh-keygen -t ed25519 -C "$EMAIL"
+    xclip -selection clipboard "/home/$USER/.ssh/github.pub"
+    yandex-browser-beta https://github.com/settings/keys
 fi
