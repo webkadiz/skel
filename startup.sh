@@ -11,6 +11,11 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
+    -e|--email)
+      EMAIL="$2"
+      shift
+      shift
+      ;;
     --yay)
       YAY="YES"
       shift
