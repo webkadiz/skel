@@ -1,3 +1,4 @@
+alias yay='yay --color always'
 alias pacman='pacman --color always'
 alias ls='ls --color=auto'
 alias compile='g++ -Og -g -ggdb -march=native -o'
