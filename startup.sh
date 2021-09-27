@@ -11,6 +11,14 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
+    --yay)
+      YAY="YES"
+      shift
+      ;;
+    --gnome)
+      GNOME="YES"
+      shift
+      ;;
     *)
       POSITIONAL+=("$1")
       shift
@@ -34,6 +42,11 @@ chsh < <(echo -e "$PASSWORD\n/usr/bin/zsh")
 # install primary packages
 sudo pacman -S $(cat packages/archlinux/pacman-primary)
 
+# load gnome settings
+if [[ $GNOME ]]; then
+    cat .gnome-settings | dconf load /
+fi
+
 # install packer
 git clone https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -49,12 +62,13 @@ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 mkdir ~/.config/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-cd /tmp
-pushd .
-git clone https://aur.archlinux.org/yay.git
-cd yay
-pushd .
-makepkg -si
-popd
-popd
-
+if [[ $YAY ]]; then
+    cd /tmp
+    pushd .
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    pushd .
+    makepkg -si
+    popd
+    popd
+fi
