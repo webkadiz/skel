@@ -80,7 +80,7 @@ fi
 
 # install gnome
 if [[ $GNOME ]]; then
-    pacman -S gnome
+    pacman -S $(cat packages/archlinux/gnome)
 fi
 
 # setup sudo
