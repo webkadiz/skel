@@ -61,6 +61,7 @@ curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 # TODO find last nvm version from github
 mkdir ~/.config/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm install --lst
 
 if [[ $YAY ]]; then
     cd /tmp
