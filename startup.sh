@@ -1,11 +1,26 @@
 #!/bin/bash
 
+# print help
+if [[ ! $1 ]]; then
+    echo "-n, --name - your name"
+    echo "-u, --user - your user name"
+    echo "-p, --passoword - password for your user"
+    echo "-e, --email - your work email"
+    echo "-e, --email - your work email"
+    exit
+fi
+
 # parse arguments
 POSITIONAL=()
 while [[ $# -gt 0 ]]; do
   key="$1"
 
   case $key in
+    -n|--NAME)
+      NAME="$2"
+      shift
+      shift
+      ;;
     -u|--USER)
       USER="$2"
       shift
@@ -42,19 +57,38 @@ done
 
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
+if [[ ! $NAME ]]; then echo "set name through -n|--name option"; fi
 if [[ ! $PASSWORD ]]; then echo "set password through -p|--password option"; fi
 if [[ ! $EMAIL ]]; then echo "set email through -e|--email option"; fi
 if [[ ! $USER ]]; then echo "set user through -u|--user option"; fi
-if [[ ! $PASSWORD || ! $EMAIL || ! $USER ]]; then exit; fi
+if [[ ! $NAME || ! $USER || ! $PASSWORD || ! $EMAIL ]]; then exit; fi
 
-# change shell to zsh
-chsh < <(echo -e "$PASSWORD\n/usr/bin/zsh")
+# install primary packages
+pacman -S $(cat packages/archlinux/pacman-primary)
+if [[ $? -ne 0 ]]; then
+    echo "packages is not installed"
+    echo "run script as root"
+    exit
+fi
+
+# setup sudo
+visudo
+
+# setup user
+useradd -m -G wheel "$USER"
+echo -e "$PASSWORD\n$PASSWORD" | passwd "$USER"
+su "$USER"
+if [[ $? -ne 0 ]]; then
+    echo "user is not setted"
+    echo "run script as root"
+    exit
+fi
 
 # sync configuration
 ./sync.py -f
 
-# install primary packages
-sudo pacman -S $(cat packages/archlinux/pacman-primary)
+# change shell to zsh
+echo -e "$PASSWORD\n/usr/bin/zsh" | chsh
 
 # setup git
 git config --global user.name "Vladislav Tkachenko"
@@ -96,5 +130,5 @@ fi
 
 # setup yandex disk
 if [[ $YDISK ]]; then
-    yandex-disk setup < <(echo -e "\n/home/$USER/ydisk\n")
+    echo -e "\n/home/$USER/ydisk\n" | yandex-disk setup
 fi
