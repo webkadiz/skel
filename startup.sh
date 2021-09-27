@@ -63,6 +63,7 @@ mkdir ~/.config/nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 nvm install --lst
 
+# setup yay
 if [[ $YAY ]]; then
     cd /tmp
     pushd .
@@ -72,4 +73,5 @@ if [[ $YAY ]]; then
     makepkg -si
     popd
     popd
+    yay -S $(cat packages/archlinux/yay-primary)
 fi
