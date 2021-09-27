@@ -3,9 +3,8 @@
 # print help
 if [[ ! $1 ]]; then
     echo "-n, --name - your name"
-    echo "-u, --user - your user name"
+    echo "-u, --username - your username"
     echo "-p, --passoword - password for your user"
-    echo "-e, --email - your work email"
     echo "-e, --email - your work email"
     exit
 fi
@@ -16,13 +15,13 @@ while [[ $# -gt 0 ]]; do
   key="$1"
 
   case $key in
-    -n|--NAME)
+    -n|--name)
       NAME="$2"
       shift
       shift
       ;;
-    -u|--USER)
-      USER="$2"
+    -u|--username)
+      USERNAME="$2"
       shift
       shift
       ;;
@@ -58,10 +57,10 @@ done
 set -- "${POSITIONAL[@]}" # restore positional parameters
 
 if [[ ! $NAME ]]; then echo "set name through -n|--name option"; fi
+if [[ ! $USERNAME ]]; then echo "set username through -u|--user option"; fi
 if [[ ! $PASSWORD ]]; then echo "set password through -p|--password option"; fi
 if [[ ! $EMAIL ]]; then echo "set email through -e|--email option"; fi
-if [[ ! $USER ]]; then echo "set user through -u|--user option"; fi
-if [[ ! $NAME || ! $USER || ! $PASSWORD || ! $EMAIL ]]; then exit; fi
+if [[ ! $NAME || ! $USERNAME || ! $PASSWORD || ! $EMAIL ]]; then exit; fi
 
 # install primary packages
 pacman -S $(cat packages/archlinux/pacman-primary)
