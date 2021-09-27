@@ -30,7 +30,7 @@ window-size=(960, 600)
 window-state=87168
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='keyboard'
 
 [org/gnome/deja-dup]
 backend='google'
@@ -72,14 +72,15 @@ secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 mru-sources=[('xkb', 'us'), ('xkb', 'ru')]
+per-window=false
 sources=[('xkb', 'us'), ('xkb', 'ru')]
-xkb-options=['terminate:ctrl_alt_bksp', 'grp:toggle', 'ctrl:swapcaps']
+xkb-options=['terminate:ctrl_alt_bksp', 'grp:toggle', 'ctrl:swapcaps', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 enable-animations=false
 enable-hot-corners=false
 font-name='Ubuntu 11'
-gtk-im-module='ibus'
+gtk-im-module='gtk-im-context-simple'
 gtk-theme='Yaru-dark'
 show-battery-percentage=true
 text-scaling-factor=1.5
@@ -170,15 +171,19 @@ move-to-workspace-1=['<Shift><Alt>exclam']
 move-to-workspace-2=['<Shift><Alt>at']
 move-to-workspace-3=['<Shift><Alt>numbersign']
 move-to-workspace-4=['<Shift><Alt>dollar']
-move-to-workspace-down=['<Shift><Alt>k']
-move-to-workspace-up=['<Shift><Alt>j']
+move-to-workspace-down=@as []
+move-to-workspace-left=['<Shift><Alt>j']
+move-to-workspace-right=['<Shift><Alt>k']
+move-to-workspace-up=@as []
 show-desktop=@as []
 switch-to-workspace-1=['<Alt>1']
 switch-to-workspace-2=['<Alt>2']
 switch-to-workspace-3=['<Alt>3']
 switch-to-workspace-4=['<Alt>4']
-switch-to-workspace-down=['<Alt>k']
-switch-to-workspace-up=['<Alt>j']
+switch-to-workspace-down=@as []
+switch-to-workspace-left=['<Alt>j']
+switch-to-workspace-right=['<Alt>k']
+switch-to-workspace-up=@as []
 switch-windows=['<Alt>e']
 switch-windows-backward=['<Shift><Alt>e']
 toggle-fullscreen=['<Alt>f']
@@ -192,6 +197,11 @@ num-workspaces=12
 [org/gnome/eog/view]
 background-color='rgb(0,0,0)'
 use-background-color=true
+
+[org/gnome/epiphany/state]
+is-maximized=false
+window-position=(-1, -1)
+window-size=(1024, 768)
 
 [org/gnome/evince/default]
 window-ratio=(1.0084711577248893, 0.7126567844925884)
@@ -286,11 +296,13 @@ sleep-inactive-battery-type='nothing'
 hinting='slight'
 
 [org/gnome/shell]
+app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Maps.desktop': <{'position': <3>}>, 'org.gnome.Books.desktop': <{'position': <4>}>, 'org.gnome.Photos.desktop': <{'position': <5>}>, 'Alacritty.desktop': <{'position': <6>}>, 'org.gnome.Totem.desktop': <{'position': <7>}>, 'org.gnome.gedit.desktop': <{'position': <8>}>, 'bssh.desktop': <{'position': <9>}>, 'bvnc.desktop': <{'position': <10>}>, 'gnome-control-center.desktop': <{'position': <11>}>, 'avahi-discover.desktop': <{'position': <12>}>, 'org.gnome.Boxes.desktop': <{'position': <13>}>, 'org.gnome.Extensions.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'lstopo.desktop': <{'position': <16>}>, 'qv4l2.desktop': <{'position': <17>}>, 'org.gnome.Cheese.desktop': <{'position': <18>}>}, {'qvidcap.desktop': <{'position': <0>}>, 'vim.desktop': <{'position': <1>}>, 'xfce4-terminal.desktop': <{'position': <2>}>, 'org.gnome.Calendar.desktop': <{'position': <3>}>, 'org.gnome.Music.desktop': <{'position': <4>}>, 'org.gnome.Epiphany.desktop': <{'position': <5>}>}]
 app-picker-view=uint32 1
 disabled-extensions=['ubuntu-appindicators@ubuntu.com']
 enabled-extensions=['just-perfection-desktop@just-perfection']
 favorite-apps=['firefox.desktop', 'org.gnome.Terminal.desktop', 'yandex-browser-beta.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'libreoffice-calc.desktop', 'org.gnome.Software.desktop', 'yelp.desktop']
 had-bluetooth-devices-setup=true
+welcome-dialog-last-shown-version='40.4'
 
 [org/gnome/shell/extensions/dash-to-dock]
 preferred-monitor=0
@@ -328,8 +340,12 @@ window-demands-attention-focus=true
 workspace=true
 workspace-popup=false
 
+[org/gnome/shell/world-clocks]
+locations=@av []
+
 [org/gnome/software]
 check-timestamp=int64 1627398553
+first-run=false
 online-updates-timestamp=int64 1627114974
 
 [org/gnome/system/location]
