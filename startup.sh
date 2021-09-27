@@ -6,6 +6,11 @@ while [[ $# -gt 0 ]]; do
   key="$1"
 
   case $key in
+    -u|--USER)
+      USER="$2"
+      shift
+      shift
+      ;;
     -p|--password)
       PASSWORD="$2"
       shift
@@ -22,6 +27,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --gnome)
       GNOME="YES"
+      shift
+      ;;
+    --ydisk)
+      YDISK="YES"
       shift
       ;;
     *)
@@ -83,4 +92,9 @@ if [[ $YAY ]]; then
     popd
     popd
     yay -S $(cat packages/archlinux/yay-primary)
+fi
+
+# setup yandex disk
+if [[ $YDISK ]]; then
+    yandex-disk setup < <(echo -e "\n/home/$USER/ydisk\n")
 fi
