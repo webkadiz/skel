@@ -74,7 +74,7 @@ secondary-color='#000000'
 mru-sources=[('xkb', 'us'), ('xkb', 'ru')]
 per-window=false
 sources=[('xkb', 'us'), ('xkb', 'ru')]
-xkb-options=['terminate:ctrl_alt_bksp', 'grp:toggle', 'ctrl:swapcaps', 'lv3:ralt_switch']
+xkb-options=['terminate:ctrl_alt_bksp', 'grp:toggle', 'ctrl:swapcaps']
 
 [org/gnome/desktop/interface]
 enable-animations=false
