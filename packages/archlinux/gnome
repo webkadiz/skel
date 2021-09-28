@@ -1,1 +1,2 @@
 pacman -S gnome gnome-tweaks
+yay -S chrome-gnome-shell
