@@ -208,3 +208,6 @@ if [[ $GH_SSH ]]; then
     xclip -selection clipboard "/home/$USER/.ssh/github.pub"
     yandex-browser-beta https://github.com/settings/keys
 fi
+
+# setup time
+timedatectl set-timezone Europe/Moscow
