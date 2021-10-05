@@ -37,5 +37,12 @@
     },
     "vim.sneak": true,
     "vim.sneakUseIgnorecaseAndSmartcase": true,
-    "vim.camelCaseMotion.enable": true
+    "vim.camelCaseMotion.enable": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Fira Code",
+    "window.zoomLevel": 1,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "none",
+    "prettier.useTabs": true,
+    "window.openFoldersInNewWindow": "off"
 }

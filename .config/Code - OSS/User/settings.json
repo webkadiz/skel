@@ -1,46 +1,48 @@
 {
-    "latex-workshop.view.pdf.viewer": "tab",
-    "editor.fontSize": 18,
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Atom One Dark",
+    "[jsonc]": {
+
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
     },
-    "workbench.startupEditor": "none",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "p"],
+            "after": ["\"", "0", "p"]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["y"],
+            "after": ["y", "g", "v", "<esc>"]
+        }
+    ],
+    "vim.useSystemClipboard": true,
     "editor.minimap.enabled": false,
-    "[json]": {
+    "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "vim.cursorStylePerMode.normal": "line",
-    "window.restoreWindows": "none",
-    "[c]": {
-        "editor.defaultFormatter": "xaver.clang-format"
-    },
-    "workbench.editor.closeOnFileDelete": true,
-    "workbench.editor.focusRecentEditorAfterClose": false,
-    "window.customMenuBarAltFocus": false,
-    "window.menuBarVisibility": "toggle",
-    "window.openFoldersInNewWindow": "off",
-    "workbench.editor.restoreViewState": false,
-    "[vue]": {
+    "editor.fontSize": 13,
+    "window.menuBarVisibility": "hidden",
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.tabWidth": 4,
-    "prettier.trailingComma": "none",
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.useTabs": true,
-    "C_Cpp.default.cppStandard": "c++17",
-    "prettier.semi": false,
-    "explorer.confirmDragAndDrop": false,
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.camelCaseMotion.enable": true,
+    "editor.fontLigatures": true,
     "editor.fontFamily": "Fira Code",
     "window.zoomLevel": 1,
-    "C_Cpp.default.cStandard": "c99",
-    "C_Cpp.formatting": "Disabled",
-    "editor.fontLigatures": true,
-    "workbench.colorTheme": "Atom One Dark",
-    "explorer.confirmDelete": false
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "none",
+    "prettier.useTabs": true,
+    "window.openFoldersInNewWindow": "off"
 }
