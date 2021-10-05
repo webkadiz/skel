@@ -1,0 +1,41 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Atom One Dark",
+    "[jsonc]": {
+
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "p"],
+            "after": ["\"", "0", "p"]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["y"],
+            "after": ["y", "g", "v", "<esc>"]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "editor.minimap.enabled": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontSize": 13,
+    "window.menuBarVisibility": "hidden",
+    "diffEditor.wordWrap": "on",
+    "editor.wordWrap": "on",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.camelCaseMotion.enable": true
+}

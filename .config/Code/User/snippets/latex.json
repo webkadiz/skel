@@ -1,0 +1,180 @@
+{
+	"math mode": {
+		"prefix": "math",
+		"body": [
+			"$",
+			"\t$0",
+			"$",
+		],
+	},
+	"inline math mode": {
+		"prefix": "im",
+		"body": "$$0$"
+	},
+	"lim": {
+		"prefix": "lim",
+		"body": "\\lim \\limits_{$1 \\to $2} $0",
+	},
+	"limx": {
+		"prefix": "limx",
+		"body": "\\lim \\limits_{x \\to x_0} ",
+	},
+	"ooo": {
+		"prefix": "ooo",
+		"body": "\\infty",
+	},
+	"epsilon": {
+		"prefix": "eps",
+		"body": "\\varepsilon"
+	},
+	"frac": {
+		"prefix": "frac",
+		"body": "\\dfrac{$1}{$2} $3"
+	},
+	"right arrow": {
+		"prefix": "ra",
+		"body": "\\Rightarrow "
+	},
+	"underline": {
+		"prefix": "under",
+		"body": "\\underline{$TM_SELECTED_TEXT}"
+	},
+	"textbf": {
+		"prefix": "bf",
+		"body": "\\textbf{$0}"
+	},
+	"sp": {
+		"prefix": "sp",
+		"body": "\\stackrel{\\circ}{S}"
+	},
+	"forall": {
+		"prefix": "all",
+		"body": "\\forall "
+	},
+	"alpha": {
+		"prefix": "alpha",
+		"body": "\\alpha(x)"
+	},
+	"beta": {
+		"prefix": "beta",
+		"body": "\\beta(x)"
+	},
+	"phi": {
+		"prefix": "phi",
+		"body": "\\varphi"
+	},
+	"left right arrow": {
+		"prefix": "lra",
+		"body": "\\Leftrightarrow "
+	},
+	"left brace": {
+		"prefix": "lb",
+		"body": [
+			"\\left\\lbrace\\begin{matrix*}[l]",
+			"\t$0",
+			"\\end{matrix*}\\right.",
+		]
+	},
+	"right brace": {
+		"prefix": "rb",
+		"body": [
+			"\\left.\\begin{matrix*}[l]",
+			"\t$0",
+			"\\end{matrix*}\\right\\rbrace",
+		]
+	},
+	"delta": {
+		"prefix": "delta",
+		"body": "\\delta"
+	},
+	"exists": {
+		"prefix": "exists",
+		"body": "\\exists "
+	},
+	"evidence": {
+		"prefix": "evidence",
+		"body": "\\textbf{Доказательсво:}\n\n"
+	},
+	"example": {
+		"prefix": "example",
+		"body": "\\textbf{Exp:}\n\n"
+	},
+	"colon": {
+		"prefix": "colon",
+		"body": "\\colon "
+	},
+	"mul": {
+		"prefix": "mul",
+		"body": "\\cdot "
+	},
+	"in": {
+		"prefix": "in",
+		"body": "\\in "
+	},
+	"matrix": {
+		"prefix": "matrix",
+		"body": [
+			"\\begin{matrix*}[l]",
+			"\t$0",
+			"\\end{matrix*}"
+		]
+	},
+	"chart": {
+		"prefix": "chart",
+		"body": [
+			"\\begin{center}",
+			"\t\\begin{tikzpicture}",
+			"\t\t\\begin{axis}[",
+			"\t\t\taxis lines=middle,",
+			"\t\t\txlabel=\\$x$, ylabel=\\$y$,",
+			"\t\t\tscale=2,",
+			"\t\t\t% xticklabel=\\empty,",
+			"\t\t\t% yticklabel=\\empty,",
+			"\t\t]",
+			"\t\t\t$0",
+			"\t\t\\end{axis}",
+			"\t\\end{tikzpicture}",
+			"\\end{center}",
+		]
+	},
+	"braces": {
+		"prefix": "braces",
+		"body": "\\left$TM_SELECTED_TEXT\\right"
+	},
+	"chart point": {
+		"prefix": "chartpoint",
+		"body": [
+			"\\addplot[$1, mark=*] coordinates {",
+			"\t($2, $3)",
+			"};\n$0"
+		]
+	},
+	"chart vertical line": {
+		"prefix": "chartvbar",
+		"body": "\\draw[red, dashed] (axis cs: $1, $2) (axis cs $3, $4);\n$0"
+	},
+	"chart node": {
+		"prefix": "chartnode",
+		"body": "\\node at (axis cs: $1, $2) {$$3$};\n$0"
+	},
+	"triangle": {
+		"prefix": "tri",
+		"body": "\\triangle "
+	},
+	"derivative": {
+		"prefix": "der",
+		"body": "f^{($TM_SELECTED_TEXT)}(x)"
+	},
+	"text": {
+		"prefix": "text",
+		"body": "\\text{$1} $0"
+	},
+	"lim triangle": {
+		"prefix": "limt",
+		"body": "\\lim \\limits_{\\triangle x \\to 0} $0"
+	},
+	"Ч.Т.Д": {
+		"prefix": "cht",
+		"body": "\\textbf{Ч.Т.Д}"
+	}
+}

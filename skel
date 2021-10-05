@@ -5,9 +5,9 @@
 .config/Code/User/keybindings.json
 .config/Code/User/settings.json
 .config/Code/User/snippets
-.config/Code\ -\ OSS/User/keybindings.json
-.config/Code\ -\ OSS/User/settings.json
-.config/Code\ -\ OSS/User/snippets.json
+.config/Code - OSS/User/keybindings.json
+.config/Code - OSS/User/settings.json
+.config/Code - OSS/User/snippets
 .config/zsh
 .todo/config
 .zshrc
