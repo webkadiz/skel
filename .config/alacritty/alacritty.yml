@@ -22,7 +22,7 @@ window:
     startup_mode: Fullscreen
 
 font:
-    size: 16
+    size: 12
     normal:
       family: 'Fira Code'
       style: regular
