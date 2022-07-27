@@ -1,9 +1,6 @@
 {
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Atom One Dark",
     "[jsonc]": {
-
-
         "editor.quickSuggestions": {
             "strings": true
         },
@@ -16,6 +13,50 @@
             "before": ["<leader>", "p"],
             "after": ["\"", "0", "p"]
         },
+        {
+            "before": ["<leader>", "i"],
+            "after": [
+                "^",
+                "f",
+                "(",
+                "l",
+                "d",
+                "i",
+                "(",
+                "^",
+                "\"",
+                "x",
+                "d",
+                "$",
+                "a",
+                "r",
+                "e",
+                "q",
+                "u",
+                "i",
+                "r",
+                "e",
+                "(",
+                "'",
+                "u",
+                "t",
+                "i",
+                "l",
+                "'",
+                ")",
+                ".",
+                "i",
+                "n",
+                "s",
+                "p",
+                "e",
+                "c",
+                "t",
+                "(",
+                "<esc>",
+                "p",
+            ]
+        }
     ],
     "vim.visualModeKeyBindings": [
         {
@@ -28,7 +69,6 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.fontSize": 13,
     "window.menuBarVisibility": "hidden",
     "diffEditor.wordWrap": "on",
     "editor.wordWrap": "on",
@@ -40,9 +80,34 @@
     "vim.camelCaseMotion.enable": true,
     "editor.fontLigatures": true,
     "editor.fontFamily": "Fira Code",
-    "window.zoomLevel": 1,
     "prettier.tabWidth": 4,
     "prettier.trailingComma": "none",
-    "prettier.useTabs": true,
-    "window.openFoldersInNewWindow": "off"
+    "window.openFoldersInNewWindow": "off",
+    "workbench.colorTheme": "Atom One Dark",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.useLanguageServer": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "thunder-client.codeSnippetLanguage": "js-fetch",
+    "vim.vimrc.enable": true,
+    "asm-code-lens.enableCodeLenses": false,
+    "redhat.telemetry.enabled": false,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDelete": false,
+    "prettier.semi": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }

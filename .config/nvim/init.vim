@@ -118,6 +118,22 @@ true_zen.setup({
 })
 EOF
 
+let g:nvim_tree_disable_window_picker = 1
+let g:nvim_tree_highlight_opened_files = 1
+let g:nvim_tree_indent_markers = 1
+let g:nvim_tree_auto_close = 1
+let g:nvim_tree_quit_on_open = 1
+let g:nvim_tree_width = 40
+let g:nvim_tree_show_icons = {
+\ 'git': 1,
+\ 'folders': 1,
+\ 'files': 1,
+\ 'folder_arrows': 0,
+\ }
+
+lua << EOF
+require('nvim-tree').setup {}
+EOF
 
 "map ,tn <Cmd>lua cycle_theme_next()<cr>
 "map ,tp <Cmd>lua cycle_theme_prev()<cr>
@@ -215,18 +231,6 @@ let &fcs='eob: '
 set shortmess+=F
 set sessionoptions+=options
 set timeoutlen=300
-let g:nvim_tree_disable_window_picker = 1
-let g:nvim_tree_highlight_opened_files = 1
-let g:nvim_tree_indent_markers = 1
-let g:nvim_tree_auto_close = 1
-let g:nvim_tree_quit_on_open = 1
-let g:nvim_tree_width = 40
-let g:nvim_tree_show_icons = {
-\ 'git': 1,
-\ 'folders': 1,
-\ 'files': 1,
-\ 'folder_arrows': 0,
-\ }
 cnoremap <cr> <cr><cmd>noh<cr>
 set guicursor=i:ver1
 set guicursor+=a:blinkon1
@@ -281,3 +285,72 @@ endfunction
 
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map . /
+
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
+map , ?

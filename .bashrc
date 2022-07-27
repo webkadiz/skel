@@ -5,7 +5,7 @@ source ~/.alias
 source ~/.vars
 source ~/.secure
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd c zsh)"
 
 PS1='[\u@\h \W]\$ '
 

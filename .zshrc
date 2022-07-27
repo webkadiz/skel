@@ -78,8 +78,10 @@ source ~/.phpbrew/bashrc
 source ~/.alias
 source ~/.vars
 source ~/.secure
+source ~/.funcs
 source ~/.config/zsh/fzf
 source ~/.config/zsh/git
+source ~/.config/zsh/mcfly
 source ~/.config/broot/launcher/bash/br
 
 autoload -U history-search-end
@@ -91,7 +93,7 @@ bindkey "^H" backward-char
 bindkey "^L" forward-char
 bindkey "^X" edit-command-line
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd c zsh)"
 
 zle -N hfzf
 zle -N rfzf
@@ -101,3 +103,9 @@ bindkey "^G" rfzf
 export NVM_DIR=~/.config/nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools

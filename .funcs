@@ -1,3 +1,17 @@
 m3u8() {
     ffmpeg -protocol_whitelist file,http,https,tcp,tls,crypto -i "$1" -c copy "$2"
 }
+
+dcache() {
+    if [[ ! $1 ]] then;
+        echo 'set parameter >= 100 for cache pressure'
+        return 1
+    fi
+
+    echo $1 | sudo tee /proc/sys/vm/vfs_cache_pressure
+}
+
+cl() {
+    rm $1obj $1map $1com $1OBJ $1MAP $1COM 2> /dev/null
+}
+

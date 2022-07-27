@@ -20,7 +20,7 @@
         "when": "notificationFocus && notificationToastsVisible"
     },
     {
-        "key": "ctrl+shift+a",
+        "key": "ctrl+e",
         "command": "workbench.view.explorer",
         "when": "viewContainer.workbench.view.explorer.enabled"
     },
@@ -34,6 +34,11 @@
         "command": "-workbench.action.quickOpen"
     },
     {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.moveEditorRightInGroup",
+        "when": "vim.mode != 'Insert'"
+    },
+    {
         "key": "shift+k",
         "command": "workbench.action.nextEditor",
         "when": "vim.mode != 'Insert'"
@@ -41,6 +46,11 @@
     {
         "key": "ctrl+pagedown",
         "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.moveEditorLeftInGroup",
+        "when": "vim.mode != 'Insert'"
     },
     {
         "key": "shift+j",
@@ -99,24 +109,7 @@
         "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+e",
-        "when": "sideBarFocus",
-        "command": "commands.run",
-        "args": [
-            "workbench.action.toggleSidebarVisibility",
-        ]
-    },
-    {
-        "key": "ctrl+e",
-        "when": "!sideBarFocus && sideBarVisible",
-        "command": "commands.run",
-        "args": [
-            "workbench.action.focusSideBar",
-            "workbench.action.toggleSidebarVisibility"
-        ]
-    },
-    {
-        "key": "ctrl+e",
+        "key": "delete",
         "when": "!sideBarFocus && !sideBarVisible",
         "command": "commands.run",
         "args": [
@@ -134,4 +127,29 @@
         "command": "-git.revertSelectedRanges",
         "when": "isInDiffEditor"
     },
+    {
+        "key": "ctrl+; o",
+        "command": "workbench.action.files.openFolder",
+        "when": "openFolderWorkspaceSupport"
+    },
+    {
+        "key": "ctrl+k ctrl+o",
+        "command": "-workbench.action.files.openFolder",
+        "when": "openFolderWorkspaceSupport"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-extension.vim_navigateCtrlL",
+        "when": "editorTextFocus && vim.active && vim.use<C-l> && !inDebugRepl",
+    }
 ]

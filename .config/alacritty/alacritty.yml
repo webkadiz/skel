@@ -1,12 +1,12 @@
 startup_mode: Fullscreen
 
-background_opacity: 1 
-
 env:
     TERM: xterm-256color
     LANG: "en_US.UTF-8"
 
 window:
+    opacity: 1
+
     dimensions:
         columns: 110
         lines: 35
@@ -22,7 +22,7 @@ window:
     startup_mode: Fullscreen
 
 font:
-    size: 12
+    size: 13
     normal:
       family: 'Fira Code'
       style: regular
