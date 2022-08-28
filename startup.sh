@@ -120,17 +120,22 @@ if [[ $? -ne 0 ]]; then
     exit
 fi
 
+ur="sudo -u $USERNAME"
+chown -R "$USERNAME" .
+chgrp -R "$USERNAME" .
+HOME="/home/$USERNAME"
+
 # sync configuration
 echo "SYNC CONFIGURATION"
 sleep $INTERVAL
 
-./sync.py -f
+$ur ./sync.py -f
 
 # change shell to zsh
 echo "CHANGE SHELL"
 sleep $INTERVAL
 
-echo -e "$PASSWORD\n/usr/bin/zsh" | chsh
+echo -e "$PASSWORD\n/usr/bin/zsh" | $ur chsh
 
 # setup git
 echo "SETUP GIT"
@@ -144,36 +149,36 @@ if [[ $GNOME ]]; then
     echo "LOAD GNOME SETTINGS"
     sleep $INTERVAL
 
-    cat .gnome-settings | dconf load /
+    cat .gnome-settings | $ur dconf load /
 fi
 
 # install packer
 echo "INSTALL PACKER"
 sleep $INTERVAL
 
-git clone https://github.com/wbthomason/packer.nvim \
+$ur git clone https://github.com/wbthomason/packer.nvim \
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # create neovim backup dir
 echo "NEOVIM BACKUP DIR"
 sleep $INTERVAL
 
-mkdir -p ~/.local/share/nvim/backup
+$ur mkdir -p ~/.local/share/nvim/backup
 
 # install oh-my-zsh
 echo "INSTALL OH-MY-ZSH"
 sleep $INTERVAL
 
-curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | $ur bash
 
 # install nvm
 # TODO find last nvm version from github
 echo "INSTALL NVM"
 sleep $INTERVAL
 
-mkdir ~/.config/nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-nvm install --lst
+$ur mkdir ~/.config/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | $ur bash
+$ur nvm install --lst
 
 # setup yay
 if [[ $YAY ]]; then
@@ -182,13 +187,13 @@ if [[ $YAY ]]; then
 
     cd /tmp
     pushd .
-    git clone https://aur.archlinux.org/yay.git
+    $ur git clone https://aur.archlinux.org/yay.git
     cd yay
     pushd .
-    makepkg -si
+    $ur makepkg -si
     popd
     popd
-    yay -S $(cat packages/archlinux/yay-primary)
+    $ur yay -S $(cat packages/archlinux/yay-primary)
 fi
 
 # setup yandex disk
@@ -196,7 +201,7 @@ if [[ $YDISK ]]; then
     echo "SETUP YANDEX DISK"
     sleep $INTERVAL
 
-    echo -e "\n/home/$USER/ydisk\n" | yandex-disk setup
+    $ur echo -e "\n/home/$USER/ydisk\n" | $ur yandex-disk setup
 fi
 
 # setup github ssh key
@@ -210,4 +215,4 @@ if [[ $GH_SSH ]]; then
 fi
 
 # setup time
-timedatectl set-timezone Europe/Moscow
+$ur timedatectl set-timezone Europe/Moscow
