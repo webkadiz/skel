@@ -1,0 +1,8 @@
+# Insert your preferred key mappings here.
+
+map o Vomnibar.activateInNewTab
+map O Vomnibar.activate
+map , moveTabLeft
+map . moveTabRight
+map F LinkHints.activateMode
+map f LinkHints.activateModeToOpenInNewTab
